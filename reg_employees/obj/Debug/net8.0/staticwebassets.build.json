@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "udjvx4zIHiPcV+Sp/mL4hXntB9UiTLlPH3rG2+5uhYQ=",
+  "Source": "reg_employees",
+  "BasePath": "_content/reg_employees",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
