@@ -4,6 +4,7 @@ public class Funcionario
     public string NomeFunc { get; set; } = string.Empty;
     public string Cpf { get; set; } = string.Empty;
     public string Cargo { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
     public float Salario { get; set; }
     public int? IdLogin { get; set; }
 

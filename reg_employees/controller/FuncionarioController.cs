@@ -20,7 +20,7 @@ public class FuncionariosController : ControllerBase
         return CreatedAtAction(nameof(GetFuncionario), new { id = funcionario.IdFunc }, funcionario);
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{idFunc}")]
     public async Task<IActionResult> GetFuncionario(int id)
     {
         var funcionario = await _context.Funcionarios.FindAsync(id);
@@ -38,5 +38,53 @@ public class FuncionariosController : ControllerBase
             return NotFound();
 
         return Ok(funcionario);
+    }
+
+    [HttpPut("{idFunc}")]
+    public async Task<IActionResult> PutFuncionario(int idFunc, Funcionario funcionario)
+    {
+        if (idFunc != funcionario.IdFunc)
+            return BadRequest("O ID do funcionário na URL não corresponde ao ID no corpo da requisição.");
+
+        var editFuncionario = await _context.Funcionarios.FindAsync(idFunc);
+        if (editFuncionario == null)
+            return NotFound();
+
+        editFuncionario.NomeFunc = funcionario.NomeFunc;
+        editFuncionario.Salario = funcionario.Salario;
+        editFuncionario.Cargo = funcionario.Cargo;
+        editFuncionario.Email = funcionario.Email;
+
+        _context.Entry(editFuncionario).State = EntityState.Modified;
+
+        try
+        {
+            // Salva as alterações no banco de dados
+            await _context.SaveChangesAsync();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            // Verifica se o funcionário ainda existe no banco
+            if (!_context.Funcionarios.Any(e => e.IdFunc == idFunc))
+                return NotFound();
+            else
+                throw;
+        }
+
+        // Retorna 204 No Content para indicar sucesso
+        return NoContent();
+    }
+
+    [HttpDelete("{idFunc}")]
+    public async Task<IActionResult> DeleteFuncionario(int idFunc)
+    {
+        var funcionario = await _context.Funcionarios.FindAsync(idFunc);
+        if (funcionario == null)
+                return NotFound();
+        
+        _context.Funcionarios.Remove(funcionario);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
     }
 }

@@ -50,6 +50,11 @@ public class AppDbContext : DbContext
             .HasMaxLength(50);
 
         modelBuilder.Entity<Funcionario>()
+            .Property(f => f.Email)
+            .IsRequired()
+            .HasMaxLength(255);
+
+        modelBuilder.Entity<Funcionario>()
             .Property(f => f.Salario)
             .IsRequired();
 
