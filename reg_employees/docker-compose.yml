@@ -1,0 +1,36 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: api_container
+    restart: always
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DOTNET_RUNNING_IN_CONTAINER: true
+    networks:
+      - my_network
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456  # Senha para o usuário root
+      MYSQL_DATABASE: cad_funcionarios  # Criação do banco de dados automático
+    ports:
+      - "3307:3306"  # Porta 3307 no host mapeada para 3306 no container
+    networks:
+      - my_network
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+volumes:
+  db_data:
+
+networks:
+  my_network:
+    driver: bridge

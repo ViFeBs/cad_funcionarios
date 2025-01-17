@@ -4277,7 +4277,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "D:\\projetos\\Projetos GIT\\cad_funcionarios\\reg_employees\\reg_employees.csproj",
-      "projectName": "reg_employees",
+      "projectName": "REG_EMPLOYEES",
       "projectPath": "D:\\projetos\\Projetos GIT\\cad_funcionarios\\reg_employees\\reg_employees.csproj",
       "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
       "outputPath": "D:\\projetos\\Projetos GIT\\cad_funcionarios\\reg_employees\\obj\\",
@@ -4364,7 +4364,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'Microsoft.Extensions.Caching.Memory' 8.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
+      "message": "Package 'Microsoft.Extensions.Caching.Memory' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-qj66-m88j-hmgj",
       "libraryId": "Microsoft.Extensions.Caching.Memory",
       "targetGraphs": [
         "net8.0"
@@ -4374,7 +4374,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "O pacote 'System.Text.Json' 8.0.4 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "message": "Package 'System.Text.Json' 8.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
       "libraryId": "System.Text.Json",
       "targetGraphs": [
         "net8.0"

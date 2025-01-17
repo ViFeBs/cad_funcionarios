@@ -13,11 +13,11 @@ public class FuncionariosController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateFuncionario(Funcionario funcionario)
+    public async Task<IActionResult> PostFuncionario(Funcionario funcionario)
     {
         _context.Funcionarios.Add(funcionario);
         await _context.SaveChangesAsync();
-        return CreatedAtAction(nameof(GetFuncionario), new { id = funcionario.IdFunc }, funcionario);
+        return CreatedAtAction(nameof(GetFuncionario), new { idFunc = funcionario.IdFunc }, funcionario);
     }
 
     [HttpGet("{idFunc}")]
