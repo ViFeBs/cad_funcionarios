@@ -23,6 +23,27 @@ public class LoginController : ControllerBase
         return CreatedAtAction(nameof(GetLogin), new { id = login.IdLogin }, login);
     }
 
+    [HttpPost("authenticate")]
+    public async Task<IActionResult> Authenticate([FromBody] Login loginInput)
+    {
+        // Busca o login no banco pelo nome de usuário
+        var login = await _context.Login.FirstOrDefaultAsync(l => l.login == loginInput.login);
+
+        // Verifica se o login existe
+        if (login == null)
+            return Unauthorized("Login ou senha inválidos.");
+
+        // Descriptografa a senha armazenada para comparar
+        var senhaDescriptografada = _criptografiaService.Descriptografar(login.Senha);
+
+        // Compara as senhas
+        if (senhaDescriptografada != loginInput.Senha)
+            return Unauthorized("Login ou senha inválidos.");
+
+        // Login autenticado com sucesso
+        return Ok(new { Message = "Autenticado com sucesso.", LoginId = login.IdLogin });
+    }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> GetLogin(int id)
     {

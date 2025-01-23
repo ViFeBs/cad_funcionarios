@@ -56,3 +56,15 @@ D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\obj\Debug\net8.0\refint\
 D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\obj\Debug\net8.0\reg_employees.pdb
 D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\obj\Debug\net8.0\reg_employees.genruntimeconfig.cache
 D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\obj\Debug\net8.0\ref\reg_employees.dll
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\publish\web.config
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\web.config
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\appsettings.Development.json
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\appsettings.json
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\publish\appsettings.Development.json
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\publish\appsettings.json
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\publish\reg_employees.deps.json
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\publish\reg_employees.runtimeconfig.json
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\publish\reg_employees.staticwebassets.endpoints.json
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\REG_EMPLOYEES.deps.json
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\REG_EMPLOYEES.runtimeconfig.json
+D:\projetos\Projetos GIT\cad_funcionarios\reg_employees\bin\Debug\net8.0\publish\REG_EMPLOYEES.staticwebassets.endpoints.json

@@ -1,0 +1,16 @@
+.base{
+    text-decoration: none;
+    color: #4ca5ed;
+}
+.consult{
+    text-decoration: none;
+    color: #218838;
+}
+
+.base:hover{
+    color: #ffffff;
+}
+
+.consult:hover{
+    color: #ffffff;
+}
